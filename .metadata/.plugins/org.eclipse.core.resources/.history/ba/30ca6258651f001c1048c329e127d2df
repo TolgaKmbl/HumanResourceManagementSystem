@@ -1,0 +1,55 @@
+package com.tolgakmbl.hrms.entities.concretes;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+import lombok.*;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name="EMPLOYER_UPDATES")
+public class EmployerUpdate {
+
+	@Column(name = "ID")
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "USER_ID")
+	private Employer employer;
+
+	@NotBlank
+	@Column(name = "COMPANY_NAME")
+	private String companyName;
+	
+	private int company_staff_id;
+
+	@NotBlank
+	@Size(max = 100)
+	@Column(name = "WEBSITE")
+	private String website;
+
+	@NotBlank
+	@Size(max = 15)
+	@Column(name = "PHONE")
+	private String phone;
+	
+	@NotNull
+	@Column(name = "updated_at")
+	private final LocalDateTime updatedAt = LocalDateTime.now();
+
+	@NotNull
+	@Column(name = "IS_APPROVED")
+	private String isApproved;
+
+	@NotNull
+	@Column(name = "IS_DELETED")
+	private String isDeleted;
+	
+}

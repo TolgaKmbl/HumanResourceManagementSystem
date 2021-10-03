@@ -1,0 +1,16 @@
+package com.tolgakmbl.hrms.business.abstracts;
+
+import com.tolgakmbl.hrms.core.utilities.results.*;
+
+public interface CityService {
+	
+	Result add(City city);
+
+	Result delete(City city);
+
+	DataResult<List<City>> getAll();
+
+	DataResult<City> getById(Id id);
+
+	Result update(City city);
+}

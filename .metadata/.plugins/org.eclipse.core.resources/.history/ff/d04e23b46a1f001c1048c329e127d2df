@@ -1,0 +1,16 @@
+package com.tolgakmbl.hrms.entities.concretes;
+
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+public class City {
+	
+	@Column(name = "id")
+	@Id
+	private short id;
+
+	@NotBlank
+	@Column(name = "name")
+	private String name;
+
+}

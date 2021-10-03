@@ -1,0 +1,5 @@
+package com.tolgakmbl.hrms.api.controllers;
+
+public class JobSeekersController {
+
+}

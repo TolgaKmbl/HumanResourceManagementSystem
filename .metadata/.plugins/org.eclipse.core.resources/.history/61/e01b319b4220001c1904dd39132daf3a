@@ -1,0 +1,55 @@
+package com.tolgakmbl.hrms.business.concretes;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tolgakmbl.hrms.business.abstracts.JobPositionService;
+import com.tolgakmbl.hrms.core.utilities.results.DataResult;
+import com.tolgakmbl.hrms.core.utilities.results.Result;
+import com.tolgakmbl.hrms.dataAccess.abstracts.JobPositionDao;
+import com.tolgakmbl.hrms.entities.concretes.JobPosition;
+
+@Service
+public class JobPositionManager implements JobPositionService{
+	
+	private JobPositionDao jobPositionDao;
+
+	@Autowired
+	public JobPositionManager(JobPositionDao jobPositionDao) {
+		super();
+		this.jobPositionDao = jobPositionDao;
+	}
+
+	@Override
+	public Result add(JobPosition jobPosition) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Result delete(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DataResult<List<JobPosition>> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DataResult<JobPosition> getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Result update(JobPosition jobPosition) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.tolgakmbl.hrms.dataAccess.abstracts;
+
+import com.tolgakmbl.hrms.entities.concretes.User;
+
+public class UserDao extends JpaRepository<User, Integer>{
+
+}

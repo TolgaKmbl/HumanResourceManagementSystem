@@ -1,0 +1,28 @@
+package com.tolgakmbl.hrms.entities.concretes;
+
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+import lombok.*;
+
+@Entity
+@Data
+@EqualsAndHashCode(callSuper=false)
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name="EMPLOYERS")
+@PrimaryKeyJoinColumn(name = "user_id")
+public class Employer extends User{
+	
+	@Column(name="COMPANY_NAME")
+	@NotBlank
+	private String company_name;
+	
+	@Column(name="WEBSITE")
+	@NotBlank
+	private String website;
+	
+	@Column(name="PHONE_NUMBER")
+	@NotBlank
+	private String phone_number;	
+}

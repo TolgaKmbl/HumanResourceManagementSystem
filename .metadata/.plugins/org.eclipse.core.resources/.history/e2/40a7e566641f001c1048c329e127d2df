@@ -1,0 +1,34 @@
+package com.tolgakmbl.hrms.entities.concretes;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
+public class JobSeeker extends User{
+	
+	@Id
+	@NotNull
+	@Column(name="USER_ID")
+	private int user_id;
+	
+	@NotBlank
+	@Column(name = "FIRST_NAME")
+	private String firstName;
+
+	@NotBlank
+	@Column(name = "LAST_NAME")
+	private String lastName;
+
+	@NotBlank
+	@Column(name = "NATIONAL_ID")
+	private String nationalId;
+
+	@NotNull
+	@Column(name = "BIRTH_YEAR")
+	private int birthYear;
+	
+	@NotNull
+	@Column(name = "CV_ID")
+	private int cvId;
+
+}

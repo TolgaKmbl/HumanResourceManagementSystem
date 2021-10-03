@@ -1,0 +1,5 @@
+package com.tolgakmbl.hrms.dataAccess.abstracts;
+
+public interface JobSeekerCVSkillDao {
+
+}

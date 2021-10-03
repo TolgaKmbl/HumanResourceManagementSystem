@@ -1,0 +1,61 @@
+package com.tolgakmbl.hrms.entities.concretes;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+import lombok.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@ToString
+@EqualsAndHashCode
+@Entity
+@Table(name = "JOB_SEEKER_CVS")
+public class JobSeekerCV {
+	
+	@Column(name = "id")
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@NotNull
+	@JoinColumn(name = "job_seeker_id")
+	@OneToOne
+	private JobSeeker jobSeeker;
+	
+	@Column(name = "cover_letter")
+	private String coverLetter;
+
+//	@JsonIgnore
+//	@OneToMany(mappedBy = "jobSeekerCV")
+//	private List<JobSeekerCVImage> images;
+//
+//	@JsonIgnore
+//	@OneToMany(mappedBy = "jobSeekerCV")
+//	private List<JobSeekerCVWebSite> webSites;
+//
+//	@JsonIgnore
+//	@OneToMany(mappedBy = "jobSeekerCV")
+//	private List<JobSeekerCVEducation> educations;
+//
+//	@JsonIgnore
+//	@OneToMany(mappedBy = "jobSeekerCV")
+//	private List<JobSeekerCVExperience> experiences;
+//
+//	@JsonIgnore
+//	@OneToMany(mappedBy = "jobSeekerCV")
+//	private List<JobSeekerCVSkill> skills;
+//
+//	@JsonIgnore
+//	@OneToMany(mappedBy = "jobSeekerCV")
+//	private List<JobSeekerCVLanguage> languages;
+	
+	@NotNull
+	@Column(name = "created_at")
+	private final LocalDateTime createdAt = LocalDateTime.now();
+
+}

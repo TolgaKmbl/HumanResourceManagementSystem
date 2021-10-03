@@ -1,0 +1,18 @@
+package com.tolgakmbl.hrms.entities.concretes;
+
+import javax.persistence.*;
+
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name="users")
+public class User {
+	
+	private int id;
+	private String email;
+	private String password;
+	private String is_active;
+	private String is_deleted;
+	
+}

@@ -1,0 +1,39 @@
+package com.tolgakmbl.hrms.entities.concretes;
+
+import com.sun.istack.NotNull;
+import javax.persistence.*;
+import lombok.*;
+import org.hibernate.validator.constraints.Range;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@ToString
+@EqualsAndHashCode
+@Entity
+@Table(name = "JOB_SEEKER_CV_LANGUAGES")
+public class JobSeekerCVLanguage {
+
+
+    @Column(name = "ID")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @NotNull
+    @JoinColumn(name = "JOB_SEEKER_CV_ID")
+    @ManyToOne
+    private JobSeekerCV jobSeekerCV;
+
+//    @NotNull
+//    @JoinColumn(name = "LANGUAGE_ID")
+//    @ManyToOne
+//    private Language language;
+
+    @NotNull
+    @Range(min = 1, max = 6)
+    @Column(name = "LANGUAGE_LEVEL")
+    private short languageLevel;
+
+}

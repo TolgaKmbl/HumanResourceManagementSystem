@@ -1,0 +1,20 @@
+package com.tolgakmbl.hrms.entities.dtos;
+
+import javax.validation.constraints.*;
+
+import lombok.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@ToString
+@EqualsAndHashCode
+public class EmailActivationForVerifyDto {
+	@NotBlank
+	@Email
+	private String email;
+
+	@NotBlank
+	private String activationCode;
+}

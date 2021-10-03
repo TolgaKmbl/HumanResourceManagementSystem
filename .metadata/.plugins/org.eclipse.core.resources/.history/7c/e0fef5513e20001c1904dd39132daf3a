@@ -1,0 +1,42 @@
+package com.tolgakmbl.hrms.business.concretes;
+
+import java.util.List;
+
+import com.tolgakmbl.hrms.business.abstracts.CompanyStaffService;
+import com.tolgakmbl.hrms.core.utilities.results.DataResult;
+import com.tolgakmbl.hrms.core.utilities.results.Result;
+import com.tolgakmbl.hrms.entities.concretes.CompanyStaff;
+
+public class CompanyStaffManager implements CompanyStaffService{
+
+	@Override
+	public Result add(CompanyStaff companyStaff) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Result delete(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DataResult<List<CompanyStaff>> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DataResult<CompanyStaff> getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Result update(CompanyStaff companyStaff) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

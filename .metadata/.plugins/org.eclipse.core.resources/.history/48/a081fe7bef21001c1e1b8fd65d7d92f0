@@ -1,0 +1,13 @@
+package com.tolgakmbl.hrms.core.utilities.helpers.email;
+
+import com.tolgakmbl.hrms.core.utilities.results.Result;
+import com.tolgakmbl.hrms.core.utilities.results.*;
+
+public class EmailManager implements EmailService{
+
+	@Override
+	public Result send(String to, String title, String body) {
+		return new SuccessResult("Email has send.");
+	}
+
+}

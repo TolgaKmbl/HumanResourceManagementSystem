@@ -1,0 +1,14 @@
+package com.tolgakmbl.hrms.api.controllers;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tolgakmbl.hrms.business.abstracts.JobSeekerCVService;
+
+@RestController
+@RequestMapping("/api/jobseekercvskills")
+public class JobSeekerCVSkillsController {
+
+	private JobSeekerCVSkillsService jobSeekerCVSkillsService;
+	
+}

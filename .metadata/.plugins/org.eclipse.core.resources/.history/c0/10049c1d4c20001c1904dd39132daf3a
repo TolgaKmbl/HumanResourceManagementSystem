@@ -1,0 +1,21 @@
+package com.tolgakmbl.hrms.api.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tolgakmbl.hrms.business.abstracts.JobSeekerService;
+
+@RestController
+@RequestMapping("/api/jobseekers")
+public class JobSeekersController {
+	
+	private JobSeekerService jobSeekerService;
+
+	@Autowired
+	public JobSeekersController(JobSeekerService jobSeekerService) {
+		super();
+		this.jobSeekerService = jobSeekerService;
+	}
+
+}

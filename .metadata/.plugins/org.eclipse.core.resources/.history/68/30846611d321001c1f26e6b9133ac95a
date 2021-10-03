@@ -1,0 +1,80 @@
+package com.tolgakmbl.hrms.business.concretes;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tolgakmbl.hrms.business.abstracts.EmployerService;
+import com.tolgakmbl.hrms.core.utilities.results.DataResult;
+import com.tolgakmbl.hrms.core.utilities.results.Result;
+import com.tolgakmbl.hrms.core.utilities.results.SuccessDataResult;
+import com.tolgakmbl.hrms.core.utilities.results.SuccessResult;
+import com.tolgakmbl.hrms.dataAccess.abstracts.EmployerDao;
+import com.tolgakmbl.hrms.entities.concretes.Employer;
+import com.tolgakmbl.hrms.entities.concretes.EmployerUpdate;
+
+@Service
+public class EmployerManager implements EmployerService{
+	
+	private final EmployerDao employerDao;
+	private final EmployerUpdateDao employerUpdateDao;
+	private final UserService userService;
+	private final EmailActivationService emailActivationService;
+	private final CompanyStaffVerificationService companyStaffVerificationService;
+	private final ImageService imageService;
+
+	@Autowired
+	public EmployerManager(final EmployerDao employerDao, final EmployerUpdateDao employerUpdateDao,
+			final UserService userService, final EmailActivationService emailActivationService,
+			final CompanyStaffVerificationService companyStaffVerificationService, final ImageService imageService) {
+		super(employerDao, "Employer");
+		this.employerDao = employerDao;
+		this.employerUpdateDao = employerUpdateDao;
+		this.userService = userService;
+		this.emailActivationService = emailActivationService;
+		this.companyStaffVerificationService = companyStaffVerificationService;
+		this.imageService = imageService;
+	}
+
+	@Override
+	public Result add(Employer employer) {
+		employerDao.save(employer);
+		return new SuccessResult("Employer added");
+	}
+
+	@Override
+	public Result delete(int id) {
+		employerDao.deleteById(id);
+		return new SuccessResult("Employer deleted");
+	}
+
+	@Override
+	public DataResult<List<Employer>> getAll() {
+		return new SuccessDataResult<List<Employer>>(employerDao.findAll(),"Employers listed");
+	}
+
+	@Override
+	public DataResult<Employer> getById(int id) {
+		return new SuccessDataResult<Employer>(employerDao.findById(id).get());
+	}
+
+	@Override
+	public Result update(Employer employer) {
+		employerDao.save(employer);
+		return new SuccessResult("Employer updated");
+	}
+
+	@Override
+	public DataResult<EmployerUpdate> getLastUpdateByUserId(int id) {
+		final List<EmployerUpdate> employerUpdates = employerUpdateDao
+				.findAllByEmployer_IdOrderByUpdatedAtDesc(employerId);
+
+		if (employerUpdates.size() == 0)
+			return new ErrorDataResult<>(ahmetcetinkaya.HRMSProjectBackend.core.business.constants.Messages
+					.notFound("Pending update approval"));
+
+		return new SuccessDataResult<EmployerUpdate>(employerUpdates.get(0));
+	}
+
+}

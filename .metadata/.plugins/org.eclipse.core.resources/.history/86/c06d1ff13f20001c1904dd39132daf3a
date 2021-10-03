@@ -1,0 +1,55 @@
+package com.tolgakmbl.hrms.business.concretes;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.tolgakmbl.hrms.business.abstracts.CompanyStaffVerificationService;
+import com.tolgakmbl.hrms.core.utilities.results.DataResult;
+import com.tolgakmbl.hrms.core.utilities.results.Result;
+import com.tolgakmbl.hrms.core.utilities.results.SuccessDataResult;
+import com.tolgakmbl.hrms.core.utilities.results.SuccessResult;
+import com.tolgakmbl.hrms.dataAccess.abstracts.CompanyStaffVerificationDao;
+import com.tolgakmbl.hrms.entities.concretes.City;
+import com.tolgakmbl.hrms.entities.concretes.CompanyStaffVerification;
+
+public class CompanyStaffVerificationManager implements CompanyStaffVerificationService{
+	
+	private CompanyStaffVerificationDao companyStaffVerificationDao;
+
+	@Autowired
+	public CompanyStaffVerificationManager(CompanyStaffVerificationDao companyStaffVerificationDao) {
+		super();
+		this.companyStaffVerificationDao = companyStaffVerificationDao;
+	}
+
+	@Override
+	public Result add(CompanyStaffVerification companyStaffVerification) {
+		companyStaffVerificationDao.save(companyStaffVerification);
+		return new SuccessResult("Company Staff Verification added");
+	}
+
+	@Override
+	public Result delete(int id) {
+		companyStaffVerificationDao.deleteById(id);
+		return new SuccessResult("Company Staff Verification deleted");
+	}
+
+	@Override
+	public DataResult<List<CompanyStaffVerification>> getAll() {
+		return new SuccessDataResult<List<City>>(companyStaffVerificationDao.findAll(),"Company Staff Verifications listed");
+	}
+
+	@Override
+	public DataResult<CompanyStaffVerification> getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Result update(CompanyStaffVerification companyStaffVerification) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

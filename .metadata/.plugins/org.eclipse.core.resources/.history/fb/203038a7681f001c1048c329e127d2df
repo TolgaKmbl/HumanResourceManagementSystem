@@ -1,0 +1,45 @@
+package com.tolgakmbl.hrms.entities.concretes;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+import lombok.*;
+
+@Data
+@NoArgsConstructor
+@EqualsAndHashCode
+@Entity
+@Table(name = "MERNIS_ACTIVATIONNS")
+public class MernisActivation {
+
+    @Column(name = "ID")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @NotNull
+    @JoinColumn(name = "USER_ID")
+    @OneToOne()
+    private User user;
+
+    @NotNull
+    @PastOrPresent
+    @Column(name = "APPROVAL_DATE")
+    private LocalDateTime approvalDate;
+
+    @NotNull
+    @Column(name = "IS_APPROVED")
+    private char isApproved;
+
+    @Builder
+    public MernisActivation(final int id, @NotNull final User user, @NotNull final char isApproved,
+                            @NotNull @PastOrPresent final LocalDateTime approvalDate) {
+        this.id = id;
+        this.user = user;
+        this.isApproved = isApproved;
+        this.approvalDate = approvalDate;
+    }
+    
+}

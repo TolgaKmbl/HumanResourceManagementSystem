@@ -1,0 +1,5 @@
+package com.tolgakmbl.hrms.business.concretes;
+
+public class MernisActivationManager {
+
+}

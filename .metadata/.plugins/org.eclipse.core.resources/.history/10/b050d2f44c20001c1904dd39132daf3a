@@ -1,0 +1,14 @@
+package com.tolgakmbl.hrms.api.controllers;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tolgakmbl.hrms.business.abstracts.WebSiteService;
+
+@RestController
+@RequestMapping("/api/websites")
+public class WebSitesController {
+	
+	private WebSiteService webSiteService;
+
+}

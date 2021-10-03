@@ -1,0 +1,35 @@
+package com.tolgakmbl.hrms.entities.concretes;
+
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+import lombok.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@ToString
+@EqualsAndHashCode
+@Entity
+@Table(name = "JOB_POSITIONS")
+public class JobPosition {
+
+	@Column(name = "ID")
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+
+	@NotBlank
+	@Column(name = "TITLE")
+	private String title;
+
+	@NotNull
+	@Column(name = "IS_ACTIVE")
+	private char isActive;
+
+	@NotNull
+	@Column(name = "IS_DELETED")
+	private char isDeleted;
+
+}

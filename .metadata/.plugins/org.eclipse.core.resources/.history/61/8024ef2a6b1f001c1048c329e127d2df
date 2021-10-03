@@ -1,0 +1,30 @@
+package com.tolgakmbl.hrms.entities.concretes;
+
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@ToString
+@EqualsAndHashCode
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler", "jobAdverts" })
+@Entity
+@Table(name = "WORKING_TIMES")
+public class WorkingTime {
+	
+	@Column(name = "id")
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private short id;
+
+	@NotBlank
+	@Length(max = 50)
+	@Column(name = "name")
+	private String name;
+
+	@OneToMany(mappedBy = "workingTime")
+	private List<JobAdvert> jobAdverts;
+
+}
