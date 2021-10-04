@@ -30,20 +30,20 @@ public class JobAdvert {
 
 	@NotNull
 	@JoinColumn(name = "job_position_id")
-	@ManyToOne()
+	@ManyToOne(fetch = FetchType.EAGER,cascade=CascadeType.ALL)
 	private JobPosition jobPosition;
 
 	@NotNull
 	@JoinColumn(name = "city_id")
-	@ManyToOne()
+	@ManyToOne(fetch = FetchType.EAGER,cascade=CascadeType.ALL)
 	private City city;
 
 	@JoinColumn(name = "working_type_id")
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER,cascade=CascadeType.ALL)
 	private WorkingType workingType;
 
 	@JoinColumn(name = "working_time_id")
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER,cascade=CascadeType.ALL)
 	private WorkingTime workingTime;
 
 	@NotBlank

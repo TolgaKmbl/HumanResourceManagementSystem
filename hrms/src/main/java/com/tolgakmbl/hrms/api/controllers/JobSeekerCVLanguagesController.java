@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,7 +44,7 @@ public class JobSeekerCVLanguagesController {
     public Result add(@RequestBody JobSeekerCVLanguage jobSeekerCVLanguage){
   	  return jobSeekerCVLanguageService.add(jobSeekerCVLanguage);
     }
-    @PostMapping("/update")
+    @PutMapping("/update")
     public Result update(@RequestBody JobSeekerCVLanguage jobSeekerCVLanguage){
   	  return jobSeekerCVLanguageService.update(jobSeekerCVLanguage);
     }

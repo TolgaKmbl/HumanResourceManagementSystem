@@ -1,9 +1,0 @@
-spring.datasource.url=jdbc:oracle:thin:@DESKTOP-UVUECF0:1521/TOLGAKMBL
-spring.datasource.username=tolgaKmbl
-spring.datasource.password=tk
-spring.jpa.properties.javax.persistence.validation.mode = none
-spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
-
-spring.jpa.database-platform=org.hibernate.dialect.Oracle10gDialect
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.hibernate.show-sql=true

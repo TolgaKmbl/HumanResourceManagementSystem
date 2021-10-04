@@ -50,7 +50,7 @@ public class JobAdvertsController {
     public Result add(@RequestBody JobAdvert jobAdvert){
   	  return jobAdvertService.add(jobAdvert);
     }
-    @PostMapping("/update")
+    @PutMapping("/update")
     public Result update(@RequestBody JobAdvert jobAdvert){
   	  return jobAdvertService.update(jobAdvert);
     }

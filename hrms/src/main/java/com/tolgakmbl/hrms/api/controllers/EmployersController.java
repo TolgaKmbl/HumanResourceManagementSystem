@@ -52,7 +52,7 @@ public class EmployersController {
     public Result add(@RequestBody Employer employer){
   	  return employerService.add(employer);
     }
-    @PostMapping("/update")
+    @PutMapping("/update")
     public Result update(@RequestBody Employer employer){
   	  return employerService.update(employer);
     }
