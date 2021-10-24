@@ -12,8 +12,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode
 public class JobAdvertForListDto implements Dto {
 	@NotNull
 	int id;

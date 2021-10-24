@@ -11,7 +11,6 @@ import lombok.*;
 
 @Entity
 @Data
-@EqualsAndHashCode
 @NoArgsConstructor
 @Table(name="users")
 @Inheritance(strategy = InheritanceType.JOINED)

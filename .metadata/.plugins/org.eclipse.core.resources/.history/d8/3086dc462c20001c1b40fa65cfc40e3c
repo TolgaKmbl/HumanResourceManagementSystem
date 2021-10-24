@@ -1,5 +1,0 @@
-package com.tolgakmbl.hrms.business.abstracts;
-
-public interface JobPositionService {
-
-}

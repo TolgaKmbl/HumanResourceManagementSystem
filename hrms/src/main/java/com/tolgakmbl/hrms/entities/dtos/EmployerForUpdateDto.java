@@ -10,8 +10,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode
 public class EmployerForUpdateDto implements Dto {
 	@NotNull
 	private int employerId;

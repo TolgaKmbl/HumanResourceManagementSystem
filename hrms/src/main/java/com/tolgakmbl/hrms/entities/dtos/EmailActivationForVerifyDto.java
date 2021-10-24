@@ -10,8 +10,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode
 public class EmailActivationForVerifyDto implements Dto {
 	@NotBlank
 	@Email

@@ -2,6 +2,7 @@ content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000o
 content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"/>
 content_assist_number_of_computers=20
 eclipse.preferences.version=1
+java.codemining.parameterNames=true
 org.eclipse.jdt.internal.ui.navigator.layout=1
 org.eclipse.jdt.internal.ui.navigator.librariesnode=true
 org.eclipse.jdt.ui.formatterprofiles.version=21

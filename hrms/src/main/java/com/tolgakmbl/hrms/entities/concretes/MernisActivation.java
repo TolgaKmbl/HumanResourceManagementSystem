@@ -9,8 +9,6 @@ import lombok.*;
 
 @Data
 @NoArgsConstructor
-@ToString
-@EqualsAndHashCode
 @Entity
 @Table(name = "mernis_activations")
 public class MernisActivation {

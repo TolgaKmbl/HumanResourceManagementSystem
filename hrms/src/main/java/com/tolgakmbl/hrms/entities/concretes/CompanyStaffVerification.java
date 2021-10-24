@@ -10,7 +10,6 @@ import lombok.*;
 @Entity
 @Data
 @Builder
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name="company_staff_verifications")

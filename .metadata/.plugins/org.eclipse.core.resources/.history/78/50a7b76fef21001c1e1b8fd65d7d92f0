@@ -1,5 +1,0 @@
-package com.tolgakmbl.hrms.core.utilities.helpers.email;
-
-public class EmailManager {
-
-}

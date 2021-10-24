@@ -11,8 +11,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@EqualsAndHashCode
-@ToString
 @Entity
 @Table(name="job_adverts")
 public class JobAdvert {

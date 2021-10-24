@@ -1,5 +1,0 @@
-package com.tolgakmbl.hrms.dataAccess.abstracts;
-
-public interface JobSeekersFavoriteJobAdvertDao {
-
-}

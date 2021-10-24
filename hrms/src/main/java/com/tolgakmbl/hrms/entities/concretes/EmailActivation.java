@@ -17,8 +17,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode
 @Table(name="email_activations")
 public class EmailActivation {	
 	

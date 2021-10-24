@@ -10,8 +10,6 @@ import lombok.*;
 
 @Entity
 @Data
-@EqualsAndHashCode(callSuper=false)
-@ToString
 @NoArgsConstructor
 @Table(name="job_seekers")
 @PrimaryKeyJoinColumn(name = "user_id", referencedColumnName = "id")

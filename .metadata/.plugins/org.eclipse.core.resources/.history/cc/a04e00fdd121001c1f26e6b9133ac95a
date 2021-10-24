@@ -1,5 +1,0 @@
-package com.tolgakmbl.hrms.entities.dtos;
-
-public class CompanyStaffForUpdateDto {
-
-}

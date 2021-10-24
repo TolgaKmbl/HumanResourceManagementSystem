@@ -13,8 +13,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode
 @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler", "jobAdverts" })
 @Entity
 @Table(name = "working_times")

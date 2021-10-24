@@ -9,8 +9,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode
 @Entity
 @Table(name = "job_seekers_favorite_job_adverts")
 public class JobSeekersFavoriteJobAdvert {

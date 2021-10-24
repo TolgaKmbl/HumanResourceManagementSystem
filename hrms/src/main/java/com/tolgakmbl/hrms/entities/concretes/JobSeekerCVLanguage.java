@@ -10,8 +10,6 @@ import org.hibernate.validator.constraints.Range;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode
 @Entity
 @Table(name = "job_seeker_cv_languages")
 public class JobSeekerCVLanguage {

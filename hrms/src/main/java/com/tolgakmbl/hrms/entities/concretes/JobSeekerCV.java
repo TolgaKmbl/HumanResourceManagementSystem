@@ -13,8 +13,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
-@EqualsAndHashCode
 @Entity
 @Table(name = "job_seeker_cvs")
 public class JobSeekerCV {
